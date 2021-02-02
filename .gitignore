@@ -1,0 +1,13 @@
+*.pyc
+*.pyd
+*.o
+*.a
+*.swp
+*.log
+*.dat
+*.ldb
+LOCK
+LOG*
+CURRENT
+MANIFEST*
+__pycache__
