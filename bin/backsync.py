@@ -2,7 +2,7 @@
 import os, sys
 from Crypto.Cipher import AES
 import base64
-from zbase3.server.rpcserver import RPCClient
+from zbase3.server.rpcclient import TCPClient
 from zbase3.server.defines import *
 import queue
 import traceback
@@ -68,7 +68,7 @@ class SyncOneServer:
         self.q.put(msg)
 
     def connect(self):
-        self.c = RPCClient({'addr':self.addr, 'timeout':1000})
+        self.c = TCPClient({'addr':self.addr, 'timeout':1000})
         ret, result = self.c.auth(key=self.authstr)
         if ret == OK:
             self.token = result['token']
