@@ -157,7 +157,7 @@ class DBAction:
         
 
 
-class NameHandler (rpcserver.BaseHandler, DBAction):
+class NameHandler (rpcserver.Handler, DBAction):
     def ping(self, data=''):
         now = datetime.datetime.now()
         return 0, {'name':config.SERVER_NAME, 'group':config.GROUP_NAME, 'time':str(now)[:19]}

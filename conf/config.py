@@ -11,7 +11,7 @@ PORT = 6001
 
 # 调试模式: True/False
 # 生产环境必须为False
-DEBUG = True
+DEBUG = False
 
 # 日志文件配置
 if DEBUG:

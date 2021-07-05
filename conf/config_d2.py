@@ -1,7 +1,7 @@
 # vim: set ts=4 et sw=4 sts=4 fileencoding=utf-8 :
 import os, sys
 
-HOME = os.path.dirname(os.path.abspath("__file__"))
+HOME = os.path.dirname(os.path.dirname(os.path.abspath("__file__")))
 if os.path.basename(HOME).isdigit():
     HOME = os.path.dirname(HOME)
 print(HOME)
